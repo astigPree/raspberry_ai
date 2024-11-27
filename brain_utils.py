@@ -3,8 +3,7 @@ from g4f.client import Client
 import time
 
 rule = """
-When generating a text, you should chosse one of the language specified here 
-( English or Filipino ) but it depends on the user command below if the language is not specified.
+When generating a text, you should English language but it depends on the user command below if the language is not specified.
 Also make the generated text words shorter as necessary but it depends on the user command
 when the text is not specified how long it will be.
 

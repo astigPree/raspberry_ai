@@ -1,0 +1,8 @@
+
+Important : enter "python main.py" in console.
+
+
+
+
+1. "pip install -r requirements.txt" in console
+2. Install sqlite in raspberry pi 
