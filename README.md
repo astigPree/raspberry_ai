@@ -42,13 +42,18 @@
 1. message : "Hello world!"
 2. action : "answer" | "music" | "remember" | "schedule" | "automate"
 3. close : true | false
-4. music : "music.mp3"
-5. item : "phone"
-6. place : "desk"
-7. schedule : "2023-05-10 12:00:00"
-8. activity : "read a book"
-9. light : "on" | "off"
-10. fan : "on" | "off"
+# Optional arguments based on the action that the assistant
+- play music :
+    1. music : "music.mp3"
+- remember something where i put the item :
+    1. item : "phone"
+    2. place : "desk"
+- schedule manage :
+    1. schedule : "2023-05-10 12:00:00"
+    2. activity : "read a book"
+- task automation [ lights and electric fan ] :
+    1. light : "on" | "off"
+    2. fan : "on" | "off"
 
 
 
