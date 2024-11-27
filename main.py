@@ -22,8 +22,8 @@ async def main_loop():
         if text:
             response = await brain.generate_response(text)
             print(f"The response is: {response}")
-            # voice.speak(response) 
-            voice.speak_with_duration(response)
+            voice.speak(response) 
+            # voice.speak_with_duration(response)
             print(f"You said: {response}")
             print("--------------------------------")
         await asyncio.sleep(2)  # Add a short delay between iterations

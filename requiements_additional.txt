@@ -6,3 +6,9 @@ Important : enter "python main.py" in console.
 
 1. "pip install -r requirements.txt" in console
 2. Install sqlite in raspberry pi 
+3. pip install SpeechRecognition
+4. pip install gTTS
+5. pip install -U g4f[all]
+6. pip install PyAudio
+6. pip install playsound | pip install pygame
+7. pip install -U g4f

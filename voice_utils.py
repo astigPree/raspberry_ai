@@ -4,12 +4,17 @@
 # to speech conversion
 from gtts import gTTS
 
-from playsound import playsound
+# from playsound import playsound
+import pygame
 
 # This module is imported so that we can 
 # play the converted audio
 import os
 import time
+
+
+# Initialize the mixer module 
+pygame.mixer.init()
 
 class VoiceUtils:
     
@@ -20,6 +25,7 @@ class VoiceUtils:
     language = 'en'
 
     save_path = "speech.mp3"
+    
     
     def update_text(self, text : str):
         self.text = text
@@ -36,12 +42,39 @@ class VoiceUtils:
             myobj = gTTS(text=self.text if text is None else text, lang=self.language, slow=False)
 
             
+            # # Check if music is playing 
+            # if pygame.mixer.music.get_busy(): 
+            #     print("Music is playing...")
+            #     # Stop the music
+            #     pygame.mixer.music.stop()
+            #     time.sleep(1)
+            #     print("Force to stop the music")
+            # else: 
+            #     print("Music is not playing.")
+            
+            pygame.mixer.music.stop()
+            pygame.mixer.music.unload()
+            time.sleep(1)
+            
+            
+            # Ensure the file can be overwritten 
+            if os.path.exists(self.save_path): 
+                os.remove(self.save_path)
+            
             # Saving the converted audio in a mp3 file named
             # welcome 
             myobj.save(self.save_path)
-             
+            
             # Playing the converted file
-            os.system(f"start {self.save_path}")
+            # os.system(f"start {self.save_path}")
+            
+            # Load the music file 
+            pygame.mixer.music.load(self.save_path)
+            
+            # Play the music 
+            pygame.mixer.music.play()
+            
+            
             
             
             
@@ -55,7 +88,7 @@ class VoiceUtils:
             myobj.save(self.save_path)
              
             # Play the audio file using playsound 
-            playsound(self.save_path) 
+            # playsound(self.save_path) 
             # Calculate the duration of the audio file using gTTS estimate 
             duration = len(text.split()) / 2 
             # Rough estimate: 2 words per second 

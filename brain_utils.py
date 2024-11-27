@@ -1,5 +1,11 @@
 
 from g4f.client import Client
+from g4f.Provider import RetryProvider, Phind, Liaobots, Free2GPT
+import g4f.debug
+
+g4f.debug.logging = True
+g4f.debug.version_check = False
+
 import time
 
 rule = """
@@ -12,8 +18,12 @@ Command :"""
 
 class BrainUtils:
     
-    client = Client()
-    model = "gpt-4o-mini"
+    # client = Client()
+    client = Client(
+        provider=RetryProvider([Phind, Free2GPT, Liaobots], shuffle=False)
+    )
+    # model = "gpt-4o-mini"
+    model = ""
 
     debounce = 2
 
