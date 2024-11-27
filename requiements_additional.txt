@@ -2,8 +2,6 @@
 Important : enter "python main.py" in console.
 
 
-
-
 1. "pip install -r requirements.txt" in console
 2. Install sqlite in raspberry pi 
 3. pip install SpeechRecognition
@@ -12,3 +10,41 @@ Important : enter "python main.py" in console.
 6. pip install PyAudio
 6. pip install playsound | pip install pygame
 7. pip install -U g4f
+
+
+COMMAND :
+fix this command into understandable command prompt
+```
+Act as an A.I. assistant and generate result based on the PLACE, RULE and the CONTENT of the user prompt.
+PLACE :
+    Pen : Location
+
+RULE :
+	Generate a response a dictionary so my python can convert it into dictionary. 
+	for example the following response;
+    {
+        message : "Hello, how can I help you today?",
+        action : "answer",
+        close : false
+    }
+    message : represent the response of the assistant
+    action : represent the action that the assistant will execute
+    close : represent if the voice sound should be stopped or just do it silently
+
+    But it based on the user prompt because possible the user prompt is not a question.
+    For example the user prompt is "can you open the lights".
+    Then there is a additional added data in the dictionary which is 'light' and also it change the action to 'automate". 
+    it will look like this:
+    
+    {
+        message : "Hello, how can I help you today?",
+        action : "automate",
+        close : false,
+        light : "on"
+    }
+
+    Here is another 
+
+
+
+```

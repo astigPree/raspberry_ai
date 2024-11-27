@@ -36,6 +36,8 @@
 6. place : string
 7. schedule : string
 8. activity : string
+9. light : string
+10. fan : string
 
 
 # Example of the data type of each text dictionary

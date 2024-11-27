@@ -44,6 +44,8 @@ class VoiceUtils:
         # the module that the converted audio should 
         # have a high speed
         if self.text or text:
+            
+            
             self.stop_speak()
             
             
