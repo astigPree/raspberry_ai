@@ -20,7 +20,7 @@ class BrainUtils:
     
     # client = Client()
     client = Client(
-        provider=RetryProvider([Phind, Free2GPT, Liaobots], shuffle=False)
+        provider=RetryProvider([Free2GPT, Phind,  Liaobots], shuffle=False)
     )
     # model = "gpt-4o-mini"
     model = ""
