@@ -19,9 +19,11 @@
 - remember something where i put the item :
     1. item : represent what item to be saved in the database
     2. place : represent where to place the item putted.
+    3. item_id : represent the id of the item that will be saved in the database
 - schedule manage :
     1. schedule : represent the day and time when the schedule be setted.
     2. activity : represent the activity that will be done in the schedule.
+    3. schedule_id : represent the id of the schedule that will be saved in the database
 - task automation [ lights and electric fan ] :
     1. light : represent the light that will be turned on or off
     2. fan : represent the fan that will be turned on or off
@@ -34,10 +36,12 @@
 4. music : string
 5. item : string
 6. place : string
-7. schedule : string
-8. activity : string
-9. light : string
-10. fan : string
+7. item_id : string
+8. schedule : string
+9. schedule_id : string
+10. activity : string
+11. light : string
+12. fan : string
 
 
 # Example of the data type of each text dictionary
@@ -50,9 +54,11 @@
 - remember something where i put the item :
     1. item : "phone"
     2. place : "desk"
+    3. item_id : "1"
 - schedule manage :
     1. schedule : "2023-05-10 12:00:00"
     2. activity : "read a book"
+    3. schedule_id : "1"
 - task automation [ lights and electric fan ] :
     1. light : "on" | "off"
     2. fan : "on" | "off"
