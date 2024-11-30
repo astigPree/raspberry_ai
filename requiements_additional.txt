@@ -10,6 +10,7 @@ Important : enter "python main.py" in console.
 6. pip install PyAudio
 6. pip install playsound | pip install pygame
 7. pip install -U g4f
+8. pip install python-dotenv
 
 
 COMMAND :

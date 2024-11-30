@@ -3,3 +3,5 @@ venv/
 *.mp3
 
 *.pyc
+
+.env
